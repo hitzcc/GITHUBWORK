@@ -4,7 +4,7 @@
 
 <Workspace>
 	<Local Expanded="Yes">
-		<Model Expanded="Yes" ID="{37DBA60B-B1F9-4E56-8180-124BE7F84B93}" Name="StudentMananger" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="../../Documents/StudentMananger/StudentMananger.prj"/>
+		<Model Expanded="Yes" ID="{0DF17993-99D8-41DD-BA6F-FCBBE018E862}" Name="Project" Type="{FF4B6538-9856-42CF-B9B9-304ED370CEAA}" URL="/Users/zhangcongcong/Documents/Project/Project.prj"/>
 	</Local>
 	<BrowserModule Name="Repository"/>
 </Workspace>
