@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.1"
+ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+ <description>131110526 - 131110528 SE Homeworks</description>
+ <display-name>CA</display-name>
+ <context-param>
+     <param-name>contextConfigLocation</param-name>
+     <param-value>\WEB-INF\config\ApplicationContext.xml</param-value>
+ </context-param>
+ <filter>
+     <filter-name>struts2</filter-name>
+     <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+ </filter>
+ <!-- FilterDispatcher用来初始化Struts 2并且处理所有的WEB请求。 -->
+ <filter-mapping>
+     <filter-name>struts2</filter-name>
+     <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ <listener>
+     <description>Bootstrap listener to start up and shut down Spring's root WebApplicationContext.</description>
+     <display-name>spring配置文件加载监听器</display-name>
+     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+ </listener>
+ <listener>
+     <listener-class>hitwh.zcc.CA.util.LacusListener</listener-class>
+ </listener>
+ <welcome-file-list>
+     <welcome-file>index.html</welcome-file>
+ </welcome-file-list>
+</web-app>

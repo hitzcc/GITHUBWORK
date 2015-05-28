@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+    <package name="CA" namespace="/CA" extends="zcc">
+
+        <action name="HelloCA" >
+            <result>/WEB-INF/jsp/index.jsp</result>
+        </action>
+        
+        <action name="test"  class="Test" method="addTestData">
+            <result name="success">/WEB-INF/jsp/index.jsp</result>
+        </action>
+		
+		<action name="addNewComponent"  class="CMA" method="addNewComponent">
+            <result name="success">/WEB-INF/jsp/index.jsp</result>
+        </action>
+        
+        
+        <action name="addComponent" class="CMA"  method="addComponent">
+            <result name="success">/WEB-INF/jsp/addComponent.jsp</result>
+        </action>
+        
+        <action name="AA_chooseBudget" class="AA"  method="chooseBudget">
+            <result name="success">/WEB-INF/jsp/chooseUsage.jsp</result>
+        </action>
+        
+        <action name="AA_chooseUsage" class="AA"  method="chooseUsage">
+            <result name="success">/WEB-INF/jsp/chooseCPU.jsp</result>
+        </action>
+        
+        <action name="AA_chooseCPU" class="AA"  method="chooseCPU">
+            <result name="success">/WEB-INF/jsp/chooseMemory.jsp</result>
+        </action>
+        
+        <action name="AA_chooseMemory" class="AA"  method="chooseMemory">
+            <result name="success">/WEB-INF/jsp/chooseHardDisk.jsp</result>
+        </action>
+        
+        <action name="AA_chooseHardDisk" class="AA"  method="chooseHardDisk">
+            <result name="success">/WEB-INF/jsp/displayMessage.jsp</result>
+        </action>
+
+        <action name="*" >
+            <result name="success">/WEB-INF/jsp/{1}.jsp</result>
+        </action>
+        <!-- Add actions here -->
+    </package>
+</struts>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定校验配置文件的DTD信息 -->
+<!DOCTYPE validators PUBLIC 
+	"-//Apache Struts//XWork Validator 1.0.3//EN"
+	"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<!-- 校验文件的根元素 private String usage;
+    private String type;
+    private String budget;
+    private String componentID;-->
+<validators>
+	<field name="usage">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">10</param>
+			<message>用途是个正整数</message>
+		</field-validator>
+	</field>
+
+
+</validators>

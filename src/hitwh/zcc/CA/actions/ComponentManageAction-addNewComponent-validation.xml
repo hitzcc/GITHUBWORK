@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="GBK"?>
+<!-- 指定校验配置文件的DTD信息 -->
+<!DOCTYPE validators PUBLIC 
+	"-//Apache Struts//XWork Validator 1.0.3//EN"
+	"http://struts.apache.org/dtds/xwork-validator-1.0.3.dtd">
+<!-- private String name;
+    private String price;
+    private String level; 
+    private String usage;
+    private String type;
+    private String model;
+    private String performance;-->
+<validators>
+	<field name="name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入名字</message>
+		</field-validator>
+	</field>
+	
+	<field name="model">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入型号</message>
+		</field-validator>
+	</field>
+	
+	<field name="type">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">10</param>
+			<message>类型是个正整数</message>
+		</field-validator>
+	</field>
+	
+	<field name="usage">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">10</param>
+			<message>用途是个正整数</message>
+		</field-validator>
+	</field>
+	
+	<field name="level">
+		<field-validator type="int">
+			<param name="min">1</param>
+			<param name="max">10</param>
+			<message>等级是个正整数</message>
+		</field-validator>
+	</field>
+	
+	<field name="price">
+		<field-validator type="int">
+			<param name="min">100</param>
+			<param name="max">999999</param>
+			<message>价格是个正整数</message>
+		</field-validator>
+	</field>
+
+</validators>
